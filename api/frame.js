@@ -3,7 +3,7 @@
 
 export default async function handler(req, res) {
   // The URL of your deployed app. Change this to your Vercel URL later!
-  const baseUrl = "https://gm-miniapp.vercel.app";
+  const baseUrl = "https://gm-miniapp-pearl.vercel.app";
 
   // 1. Extract the user's chosen chain from the request, or default to 'Base'
   const url = new URL(req.url, `http://${req.headers.host}`);
@@ -41,15 +41,13 @@ export default async function handler(req, res) {
       <meta property="og:title" content="GM Frame" />
       <meta property="og:image" content="${baseUrl}/api/image?chain=${chain}" />
       
-      {{% FRAME_META_TAGS %}}
-        <meta name="fc:frame" content="vNext" />
-        <meta name="fc:frame:image" content="${baseUrl}/api/image?chain=${chain}" />
-        <meta name="fc:frame:post_url" content="${baseUrl}/api/frame?chain=${chain}" />
-        <meta name="fc:frame:button:1" content="Send GM 🌐" />
-        <meta name="fc:frame:button:1:action" content="tx" />
-        <meta name="fc:frame:button:1:target" content="${baseUrl}/api/frame?chain=${chain}" />
-        <meta name="fc:frame:button:1:post_url" content="${baseUrl}/api/complete" />
-      {{% END_FRAME_META_TAGS %}}
+      <meta name="fc:frame" content="vNext" />
+      <meta name="fc:frame:image" content="${baseUrl}/api/image?chain=${chain}" />
+      <meta name="fc:frame:post_url" content="${baseUrl}/api/frame?chain=${chain}" />
+      <meta name="fc:frame:button:1" content="Send GM 🌐" />
+      <meta name="fc:frame:button:1:action" content="tx" />
+      <meta name="fc:frame:button:1:target" content="${baseUrl}/api/frame?chain=${chain}" />
+      <meta name="fc:frame:button:1:post_url" content="${baseUrl}/api/complete" />
       
     </head>
     <body>
