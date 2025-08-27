@@ -3,12 +3,11 @@
 
 export default async function handler(req, res) {
   // The URL of your deployed app.
-  const baseUrl = "https://gm-miniapp-pearl.vercel.app";
+  const baseUrl = "https://gm-miniapp-hfuq26pqr-makabeezs-projects.vercel.app";
 
   // 1. Extract the user's chosen chain from the request, or default to 'Base'
-  const url = new URL(req.url, `http://${req.headers.host}`);
   // Get the chain from query parameters or default to 'Base'
-const chain = req.query.chain || 'Base';
+  const chain = req.query.chain || 'Base';
 
   // 2. Define the transaction we want to send (0.2 USDC on Base to your wallet)
   const txData = {
