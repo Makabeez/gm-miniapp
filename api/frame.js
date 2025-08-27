@@ -3,7 +3,7 @@
 
 export default async function handler(req, res) {
   // The URL of your deployed app.
- const baseUrl = "https://gm-miniapp-rho.vercel.app";
+ const baseUrl = "https://gm-miniapp-delta.vercel.app";
 
   // 1. Extract the user's chosen chain from the request, or default to 'Base'
   // Get the chain from query parameters or default to 'Base'
