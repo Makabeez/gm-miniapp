@@ -7,7 +7,8 @@ export default async function handler(req, res) {
 
   // 1. Extract the user's chosen chain from the request, or default to 'Base'
   const url = new URL(req.url, `http://${req.headers.host}`);
-  const chain = url.searchParams.get('chain') || 'Base';
+  // Get the chain from query parameters or default to 'Base'
+const chain = req.query.chain || 'Base';
 
   // 2. Define the transaction we want to send (0.2 USDC on Base to your wallet)
   const txData = {
